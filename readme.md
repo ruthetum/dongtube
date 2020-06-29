@@ -12,4 +12,5 @@ cloneing youtube with NodeJS
 * helmet
 * cookie-parser
 * body-parser
-* routing
+* routing + url setting
+* MVC
