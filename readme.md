@@ -1,6 +1,6 @@
 # Dongtube
 
-cloneing youtube with NodeJS
+cloning youtube with NodeJS
 
 * express
 * babel
