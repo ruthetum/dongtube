@@ -14,4 +14,4 @@ cloning youtube with NodeJS
 * body-parser
 * routing + url setting
 * MVC
-* pug
+* pug - extend, partial
