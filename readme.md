@@ -6,3 +6,9 @@ cloneing youtube with NodeJS
 * babel
 * nodemon
 * middleware
+* morgan
+* helmet
+* morgan
+* helmet
+* cookie-parser
+* body-parser
