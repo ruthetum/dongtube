@@ -15,3 +15,5 @@ cloning youtube with NodeJS
 * routing + url setting
 * MVC
 * pug - extend, partial, mixin
+* mongo DB, mongoose
+* dotenv
