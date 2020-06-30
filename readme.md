@@ -17,3 +17,4 @@ cloning youtube with NodeJS
 * pug - extend, partial, mixin
 * mongo DB, mongoose
 * dotenv
+* async, await
