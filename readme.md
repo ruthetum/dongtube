@@ -20,3 +20,4 @@ cloning youtube with NodeJS
 * async, await
 * multer
 * static
+* Linter (ESLint)
