@@ -18,3 +18,5 @@ cloning youtube with NodeJS
 * mongo DB, mongoose
 * dotenv
 * async, await
+* multer
+* static
