@@ -22,3 +22,6 @@ cloning youtube with NodeJS
 * static
 * Linter (ESLint)
 * webpack
+* cross-env
+* css-loader, postcss-lodaer, sass-loader, node-sass
+* autoprefixer
