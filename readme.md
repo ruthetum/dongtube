@@ -27,4 +27,4 @@ cloning youtube with NodeJS
 * autoprefixer
 * babel-loader
 * @babel/polyfill
-* passport, passport-local-mongoose
+* passport, passport-local, passport-local-mongoose
