@@ -28,3 +28,4 @@ cloning youtube with NodeJS
 * babel-loader
 * @babel/polyfill
 * passport, passport-local, passport-local-mongoose
+* express-session
