@@ -12,6 +12,15 @@
       &:not(:last-child) {
         margin-bottom: 15px;
       }
+    a img{
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+    }
       span {
         margin-right: 10px;
         font-size: 20px;

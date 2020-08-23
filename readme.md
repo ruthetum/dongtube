@@ -30,3 +30,5 @@ cloning youtube with NodeJS
 * passport, passport-local, passport-local-mongoose
 * express-session
 * connect-mongo
+* passport-kakao
+* passport-github
