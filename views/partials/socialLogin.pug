@@ -1,7 +1,8 @@
 .social-login
     button.social-login--github
-        span
-            i.fab.fa-github 
-        |Continue with Github
-    a(href='/kakao/oauth')
+        a(href=routes.github)
+            span
+                i.fab.fa-github 
+            |Continue with Github
+    a(href='/auth/kakao/callback')
         img(src='/static/img/kakao_login.png')
