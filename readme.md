@@ -25,3 +25,4 @@ cloning youtube with NodeJS
 * cross-env
 * css-loader, postcss-lodaer, sass-loader, node-sass
 * autoprefixer
+* babel-loader
