@@ -26,3 +26,4 @@ cloning youtube with NodeJS
 * css-loader, postcss-lodaer, sass-loader, node-sass
 * autoprefixer
 * babel-loader
+* @babel/polyfill
