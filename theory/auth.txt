@@ -5,4 +5,3 @@ username, password -> mongoose 확인 -> passport cookie 생성
 github website (auth) -> /auth/github/callback
 -> githubLoginCallback (profile)
 -> cb(error, user) -> cookie 생성 및 저장
-

@@ -6,6 +6,7 @@ import User from "../models/user";
 export const getJoin = (req, res) => {
   res.render("join", { pageTitle: "Join" });
 };
+
 export const postJoin = async (req, res, next) => {
   const {
     body: { name, email, password, password2 }
@@ -63,7 +64,35 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
 
 export const postGithubLogIn = (req, res) => {
   res.redirect(routes.home);
-}
+};
+
+export const kakaoLogin = passport.authenticate('kakao');
+
+export const kakaoLoginCallback = async (_, __, profile, cb) => {
+  console.log(profile);
+  const {  _json:  { id, properties: { nickname }, kakao_account: { email } } } = profile;
+  try {
+    const user = await User.findOne({email});
+    if (user) {
+      user.kakaoId = id;
+      user.save();
+      return cb(null, user);
+    } else {
+      const newUser = await User.create({
+        name: nickname,
+        kakaoId: id,
+        email: email
+      });
+      return cb(null, newUser);
+    }
+  } catch(error) {
+    return cb(error);
+  }
+};
+
+export const postKakaoLogIn = (req, res) => {
+  res.redirect(routes.home);
+};
 
 export const logout = (req, res) => {
   req.logout();
