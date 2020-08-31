@@ -33,3 +33,5 @@ cloning youtube with NodeJS
 * passport-kakao
 * passport-github
 * axios
+* aws-sdk
+* multer-s3
