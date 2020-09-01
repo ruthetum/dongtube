@@ -35,3 +35,4 @@ cloning youtube with NodeJS
 * axios
 * aws-sdk
 * multer-s3
+* get-blob-duration
