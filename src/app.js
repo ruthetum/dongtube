@@ -11,6 +11,7 @@ import passport from "passport";
 import MongoStore from "connect-mongo";
 import session from "express-session";
 import path from "path";
+import flash from "express-flash";
 import { localsMiddleware } from "./middlewares";
 import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
@@ -38,6 +39,7 @@ app.use(session({
     saveUninitialized: false,
     store: new CokieStore({ mongooseConnection: mongoose.connection })
 }));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
