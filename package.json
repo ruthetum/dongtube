@@ -13,10 +13,11 @@
   },
   "homepage": "https://github.com/ruthetum/dongtube#readme",
   "dependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/node": "^7.10.3",
-    "@babel/polyfill": "^7.10.4",
-    "@babel/preset-env": "^7.10.3",
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/node": "^7.10.5",
+    "@babel/polyfill": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "autoprefixer": "^9.8.6",
     "aws-sdk": "^2.743.0",
     "axios": "^0.20.0",
@@ -34,6 +35,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "get-blob-duration": "^1.1.2",
     "helmet": "^3.23.3",
+    "mini-css-extract-plugin": "^0.11.0",
     "mongoose": "^5.9.20",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
@@ -47,18 +49,24 @@
     "postcss-loader": "^3.0.0",
     "pug": "^3.0.0",
     "sass-loader": "^9.0.3",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^4.36.1"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore '.scss' --ignore 'static' ",
-    "dev:assets": "set WEBPACK_ENV=development&&webpack -w",
-    "build:assets": "set WEBPACK_ENV=production&&webpack"
+    "dev:server": "nodemon --exec babel-node src/init.js --delay 2 --ignore '.scss' --ignore 'static' ",
+    "dev:assets": "cd src && cross-env WEBPACK_ENV=development webpack -w",
+    "build:assets": "cd src && cross-env WEBPACK_ENV=production webpack",
+    "build:server": "babel src --out-dir build --ignore 'src/assets','src/static','src/webpack.config.js'",
+    "copyAll": "xcopy .\\src\\static .\\build\\static /s /y && xcopy .\\src\\views .\\build\\views /s /y",
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rd /s /q build",
+    "tunnel": "ngrok http 4000",
+    "start": "node build/init.js"
   },
   "devDependencies": {
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack-cli": "^3.3.12"
   }
 }

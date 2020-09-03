@@ -3,6 +3,7 @@ package-lock.json
 videos
 uploads
 static
+build
 
 # Logs
 logs
