@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 dotenv.config();
 
 mongoose.connect(
-    process.env.MONGO_URL,
+    process.env.MONGO_ATLAS_URL,
     {
         useNewUrlParser: true,
         useFindAndModify: false
